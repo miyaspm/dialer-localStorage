@@ -1,0 +1,21 @@
+.main-content {
+  margin: 16px;
+}
+
+.prefix-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.operator-select{
+    margin: 10px;
+}
+
+button{
+    width: 100%;
+}
+
+.toolbar-header{
+  flex: 1 1 auto;
+  text-align: center;
+}

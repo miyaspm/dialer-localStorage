@@ -1,0 +1,32 @@
+.main-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-content{
+  margin: 16px;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  margin: 5px;
+}
+
+.dialer-grid{
+  margin: 16px;
+}
+
+.toolbar-header{
+  flex: 1 1 auto;
+  text-align: center;
+}

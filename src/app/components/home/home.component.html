@@ -1,0 +1,71 @@
+<mat-toolbar>
+  <span class="toolbar-header">Dialer</span>
+</mat-toolbar>
+
+<mat-card class="main-content">
+  <form class="main-form" [formGroup]="dialerform">
+    <mat-form-field class="example-full-width">
+      <input type='number' matInput placeholder="Enter Number" formControlName="dialnum">
+      <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="clearInput()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+
+    <div class="dialer-grid">
+      <div class="row">
+        <div class="column">
+          <button mat-fab (click)="virtualKeyClick('1')">1</button>
+        </div>
+        <div class="column">
+          <button mat-fab (click)="virtualKeyClick('2')">2</button>
+        </div>
+        <div class="column">
+          <button mat-fab (click)="virtualKeyClick('3')">3</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <button mat-fab (click)="virtualKeyClick('4')">4</button>
+        </div>
+        <div class="column">
+          <button mat-fab (click)="virtualKeyClick('5')">5</button>
+        </div>
+        <div class="column">
+          <button mat-fab (click)="virtualKeyClick('6')">6</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <button mat-fab (click)="virtualKeyClick('7')">7</button>
+        </div>
+        <div class="column">
+          <button mat-fab (click)="virtualKeyClick('8')">8</button>
+        </div>
+        <div class="column">
+          <button mat-fab (click)="virtualKeyClick('9')">9</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <button mat-fab (click)="virtualKeyClick('+')">+</button>
+        </div>
+        <div class="column">
+          <button mat-fab (click)="virtualKeyClick('0')">0</button>
+        </div>
+        <div class="column">
+          <button mat-fab (click)="virtualKeyClick('#')">#</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="submit-btn">
+      <button mat-raised-button color="primary" (click)="click2Call()">Call</button>
+    </div>
+
+    <div>
+      <p>{{finalResult}}</p>
+    </div>
+  </form>
+</mat-card>

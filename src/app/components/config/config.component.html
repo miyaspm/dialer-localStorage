@@ -1,0 +1,23 @@
+<mat-toolbar>
+  <span class="toolbar-header">Configure Cost</span>
+</mat-toolbar>
+<mat-card class="main-content">
+  <form class="prefix-form" [formGroup]="prefixcostform">
+    <!-- Form elements are here -->
+    <mat-form-field>
+      <input matInput placeholder="Prefix" type="tel" name="prefix" formControlName="prefix">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Cost" type="number" name="password" formControlName="cost">
+    </mat-form-field>
+
+    <mat-radio-group aria-label="Select Operator" formControlName="operator">
+      <mat-radio-button class="operator-select" value="A">Operator A</mat-radio-button>
+      <mat-radio-button class="operator-select" value="B">Operator B</mat-radio-button>
+    </mat-radio-group>
+  
+  <mat-card-actions>
+    <button mat-raised-button [disabled]="!prefixcostform.valid" (click)="insertDialCode()" color="primary">Insert</button>
+  </mat-card-actions>
+</form>
+</mat-card>
